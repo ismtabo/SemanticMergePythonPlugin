@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-from core import parse_file, print_code_tree
+from smpy_plugin.core import parse_file, print_code_tree
 
 parser = argparse.ArgumentParser(description='Semantic Merge Python Parser Plugin')
 parser.add_argument('mode', type=str,
@@ -22,3 +22,5 @@ while not input_file == 'end':
 
     code_tree = parse_file(input_file)
     print_code_tree(output_file, code_tree)
+
+    input_file = input()
